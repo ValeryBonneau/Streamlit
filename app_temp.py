@@ -21,4 +21,9 @@ with open(rel_to_config_json_path, 'r') as f:
     # Load JSON data from file
     json_data = json.load(f)
 
+# Load evo_model json_data['evo_model']
+evo_model_path = os.path.join(script_dir, models_dir, json_data["evo_model"])
+evo_model = RNNModel.load(evo_model_path, map_location='cpu')
+
+
 st.write(f'{temp}')
