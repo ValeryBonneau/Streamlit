@@ -7,6 +7,7 @@ https://saudi-arabia-industrial-co2.streamlit.app
 import streamlit as st
 import os
 import json
+from darts.models import RegressionModel, CatBoostModel, RandomForest, LightGBMModel, XGBModel, RNNModel
 
 # Set the work directory to retrieve all data
 temp = os.environ
